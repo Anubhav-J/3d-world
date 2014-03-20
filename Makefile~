@@ -1,0 +1,14 @@
+CC = g++
+CFLAGS = -Wall
+PROG = ./201101173
+
+SRCS = 201101173_Assignment4.cpp imageloader.cpp
+LIBS = -lglut -lGL -lGLU -w
+
+all: $(PROG)
+
+$(PROG):	$(SRCS)
+	$(CC) $(CFLAGS) -o $(PROG) $(SRCS) $(LIBS)
+
+clean:
+	rm -f $(PROG)
